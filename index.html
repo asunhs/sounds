@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>사운드</title>
+
+    <script>
+
+        var current;
+
+        function control(key) {
+            if (!!current && !current.ended) {
+                pause(current);
+            }
+            current = document.querySelector(key);
+            play(current);
+        }
+
+        function play(dom) {
+            dom.play();
+        }
+
+        function pause(dom) {
+            dom.pause();
+            dom.currentTime = 0;
+        }
+    </script>
 </head>
 <body>
-    <audio src="./sounds/dog.mp3" ></audio>
+    <img src="./images/dog.png" onclick="control('#dog')"/>
+    <audio id="dog" src="./sounds/dog.mp3" ></audio>
 </body>
 </html>
