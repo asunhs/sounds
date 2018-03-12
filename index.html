@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>사운드</title>
 
     <script>
@@ -24,10 +25,146 @@
             dom.pause();
             dom.currentTime = 0;
         }
+
     </script>
+    <style>
+        body {
+            margin-bottom: 170px;
+            text-align: center;
+            background-color: #8C8EC1;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 1fr;
+            grid-gap: 10px;
+        }
+
+        ul > li {
+            background: #A9B8D6;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        nav {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 150px;
+            background-color: #402D27;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        nav > a {
+            display: inline-block;
+            height: 130px;
+            min-width: 150px;
+            background-color: #F3D7AB;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 2em;
+            color: #402D27;
+        }
+
+        a:visited {
+            color: #402D27;
+        }
+
+    </style>
 </head>
 <body>
-    <img src="./images/dog.png" onclick="control('#dog')"/>
-    <audio id="dog" src="./sounds/dog.mp3" ></audio>
+<ul>
+    <li id="1">
+        <img src="./images/alligator.png" onclick="control('#alligator')"/>
+        <audio id="alligator" src="./sounds/alligator.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/ape.png" onclick="control('#ape')"/>
+        <audio id="ape" src="./sounds/ape.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/cat.png" onclick="control('#cat')"/>
+        <audio id="cat" src="./sounds/cat.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/chicken.png" onclick="control('#chicken')"/>
+        <audio id="chicken" src="./sounds/chicken.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/cow.png" onclick="control('#cow')"/>
+        <audio id="cow" src="./sounds/cow.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/dog.png" onclick="control('#dog')"/>
+        <audio id="dog" src="./sounds/dog.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/dove.png" onclick="control('#dove')"/>
+        <audio id="dove" src="./sounds/dove.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/duck.png" onclick="control('#duck')"/>
+        <audio id="duck" src="./sounds/duck.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/elephant.png" onclick="control('#elephant')"/>
+        <audio id="elephant" src="./sounds/elephant.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/falcon.png" onclick="control('#falcon')"/>
+        <audio id="falcon" src="./sounds/falcon.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/horse.png" onclick="control('#horse')"/>
+        <audio id="horse" src="./sounds/horse.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/lion.png" onclick="control('#lion')"/>
+        <audio id="lion" src="./sounds/lion.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/moose.png" onclick="control('#moose')"/>
+        <audio id="moose" src="./sounds/moose.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/owl.png" onclick="control('#owl')"/>
+        <audio id="owl" src="./sounds/owl.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/panda.png" onclick="control('#panda')"/>
+        <audio id="panda" src="./sounds/panda.mp3"></audio>
+    </li>
+    <li id="2">
+        <img src="./images/penguin.png" onclick="control('#penguin')"/>
+        <audio id="penguin" src="./sounds/penguin.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/pig.png" onclick="control('#pig')"/>
+        <audio id="pig" src="./sounds/pig.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/rooster.png" onclick="control('#rooster')"/>
+        <audio id="rooster" src="./sounds/rooster.mp3"></audio>
+    </li>
+    <li>
+        <img src="./images/sheep.png" onclick="control('#sheep')"/>
+        <audio id="sheep" src="./sounds/sheep.mp3"></audio>
+    </li>
+</ul>
+<nav>
+    <a href="#1">동물</a>
+    <a href="#2">사물</a>
+    <a href="#1">자연</a>
+</nav>
 </body>
 </html>
