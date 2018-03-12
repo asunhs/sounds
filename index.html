@@ -44,8 +44,10 @@
         function toggle() {
             if (document.querySelector("#nav").className === "expand") {
                 document.querySelector("#nav").className = "";
+                document.querySelector(".switch").className = "switch"
             } else {
                 document.querySelector("#nav").className = "expand";
+                document.querySelector(".switch").className = "switch expand";
             }
         }
 
@@ -99,7 +101,7 @@
             transition: height .3s;
         }
 
-        nav > .switch {
+        .switch {
             position: fixed;
             left: calc(50% - 60px);
             right: calc(50% - 60px);
@@ -115,14 +117,14 @@
         }
 
         nav.expand {
-            height: calc(100vh - 100px);
+            height: calc(100vh - 200px);
             -webkit-transition: height .3s;
             -moz-transition: height .3s;
             transition: height .3s;
         }
 
-        nav.expand > .switch {
-            bottom: calc(100vh - 80px);
+        .switch.expand {
+            bottom: calc(100vh - 180px);
             -webkit-transition: bottom .3s;
             -moz-transition: bottom .3s;
             transition: bottom .3s;
@@ -227,8 +229,8 @@
         <audio id="sheep" src="./sounds/sheep.mp3"></audio>
     </li>
 </ul>
+<div class="switch" onclick="toggle()"></div>
 <nav id="nav">
-    <div class="switch" onclick="toggle()"></div>
     <a href="#1">동물</a>
     <a href="#2">사물</a>
     <a href="#1">자연</a>
